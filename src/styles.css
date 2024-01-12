@@ -1,0 +1,71 @@
+.App {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.cardList {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.card {
+  border: 0.5px solid #afafaf;
+  width: 200px;
+  height: 300px;
+  border-radius: 6px;
+}
+
+.card img {
+  object-fit: contain;
+  width: 200px;
+  height: 150px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.cardBody {
+  padding: 10px;
+}
+
+.cardBody strong {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.cardBody p {
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+}
+
+.magic-input {
+  display: inline-grid;
+  vertical-align: top;
+  align-items: center;
+  position: relative;
+  border: solid 1px;
+  /* padding: 0.25em 0.5em; */
+  margin: 5px;
+}
+
+.magic-input::after,
+input {
+  width: auto;
+  min-width: 1em;
+  grid-area: 1 / 2;
+  font: inherit;
+  padding: 0.25em;
+  margin: 0;
+  resize: none;
+  background: none;
+  appearance: none;
+  border: none;
+}
+
+.magic-input::after {
+  content: attr(data-value) " ";
+  visibility: hidden;
+}
